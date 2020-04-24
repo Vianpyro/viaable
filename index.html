@@ -4,22 +4,25 @@
     <link rel="stylesheet" href="src/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-search engine</title>
+    <title>Viaable</title>
 </head>
 <body>
-    <form action="https://www.google.com/search" method="GET" id="SENGINE">
-        <input type="text" name="q" placeholder="Search">
-        <select id="sengine" onchange = "detect_sengine()">
-            <option class="sengine-option" id="bing">Bing</option>
-            <option class="sengine-option" id="ddgo">DuckDuckGo</option>
-            <option class="sengine-option" id="ecosia">Ecosia</option>
-            <option class="sengine-option" id="fb">Facebook</option>
-            <option class="sengine-option" id="gh">GitHub</option>
-            <option class="sengine-option" id="google" selected>Google</option>
-            <option class="sengine-option" id="qwant">Qwant</option>
-        </select>
-        <input type="submit" value="Search">
-    </form>
+    <div class="searchbar">
+        <h1>Viaable</h1><p>Web multi-search engine</p>
+        <form action="https://www.google.com/search" method="GET" id="SENGINE" autocomplete="off">
+            <input type="text" name="q" placeholder="Search">
+            <select id="sengine" onchange = "detect_sengine()">
+                <option class="sengine-option" id="bing">Bing</option>
+                <option class="sengine-option" id="ddgo">DuckDuckGo</option>
+                <option class="sengine-option" id="ecosia">Ecosia</option>
+                <option class="sengine-option" id="fb">Facebook</option>
+                <option class="sengine-option" id="gh">GitHub</option>
+                <option class="sengine-option" id="google" selected>Google</option>
+                <option class="sengine-option" id="qwant">Qwant</option>
+            </select>
+            <input type="submit" value="Search" id="search-btn">
+        </form>
+    </div>
     <div class="script">
         <script src="src/javascript/search_engine.js"></script>
     </div>
