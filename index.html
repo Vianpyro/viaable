@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google test</title>
+    <title>Multi-search engine</title>
 </head>
 <body>
-    <form action="https://www.ecosia.org/search?" method="GET">
+    <form action="https://www.google.com/search" method="GET" id="SENGINE">
         <input type="text" name="q" placeholder="Search">
-        <input type="submit" value="Search Ecosia">
+        <select id="sengine" onchange = "detect_sengine()">
+            <option>Google</option>
+            <option>Ecosia</option>
+            <option>Qwant</option>
+        </select>
+        <input type="submit" value="Search">
     </form>
+    <div class="script">
+        <script src="js.js"></script>
+    </div>
 </body>
 </html>
