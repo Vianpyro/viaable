@@ -9,14 +9,16 @@
     <form action="https://www.google.com/search" method="GET" id="SENGINE">
         <input type="text" name="q" placeholder="Search">
         <select id="sengine" onchange = "detect_sengine()">
-            <option>Google</option>
+            <option>Bing</option>
+            <option>DuckDuckGo</option>
             <option>Ecosia</option>
+            <option selected="true">Google</option>
             <option>Qwant</option>
         </select>
         <input type="submit" value="Search">
     </form>
     <div class="script">
-        <script src="js.js"></script>
+        <script src="src/javascript/search_engine.js"></script>
     </div>
 </body>
 </html>
