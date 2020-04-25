@@ -60,4 +60,5 @@ function detect_sengine() {
             document.getElementById("SENGINE").action = "https://www.google.com/search";
     }
     document.cookie = `sengine=${selected_sengine};` + `expires=${get_expiration_date()}`;
+    console.log(`sengine=${selected_sengine};` + `expires=${get_expiration_date()}`)
 }
