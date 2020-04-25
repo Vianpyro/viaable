@@ -1,3 +1,35 @@
+switch (document.cookie) {
+    case "sengine=Bing":
+        document.getElementById("bing").selected = "selected";
+        break;
+    case "sengine=DuckDuckGo":
+        document.getElementById("ddgo").selected = "selected";
+        break;
+    case "sengine=Ecosia":
+        document.getElementById("ecosia").selected = "selected";
+        break;
+    case "sengine=Facebook":
+        document.getElementById("fb").selected = "selected";
+        break;
+    case "sengine=GitHub":
+        document.getElementById("gh").selected = "selected";
+        break;
+    case "sengine=Google":
+        document.getElementById("google").selected = "selected";
+        break;
+    case "sengine=Qwant":
+        document.getElementById("qwant").selected = "selected";
+        break;
+    default:
+        document.getElementById("google").selected = "selected";
+}
+
+function get_expiration_date() {
+    var date = new Date();
+    var year = date.getFullYear() + 1;
+    return new Date(year, date.getMonth(), date.getDate());
+}
+
 function detect_sengine() {
     var sengine = document.getElementById("sengine"); // getting the selected web search engine
     var selected_sengine = sengine.options[sengine.selectedIndex].text;
@@ -27,4 +59,5 @@ function detect_sengine() {
         default:
             document.getElementById("SENGINE").action = "https://www.google.com/search";
     }
+    document.cookie = `sengine=${selected_sengine};` + `expires=${get_expiration_date()}`;
 }
