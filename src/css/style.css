@@ -1,80 +1,82 @@
-* {
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100vh;
-    background-image: linear-gradient(120deg, #3498db, #8e44ad);
-}
-
-.searchbar {
-    background: #f1f1f1;
-    height: 270px;
-    width: 520px;
-    padding: 40px 80px;
-    border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.searchbar h1,
-.searchbar p {
-    text-align: center;
-}
-
-.searchbar p {
-    margin-bottom: 30px;
-}
-
-.searchbar input,
-.searchbar select {
-    font-size: 15px;
-    color: #333;
-    border: none;
-    width: 100%;
-    outline: none;
-    background: none;
-    padding: 0 5px;
-    height: 40px;
-}
-
-#search-btn {
-    background-color: #333;
-    border-radius: 10px;
-    color: #f1f1f1;
-    margin: 10px 0;
-    transition-duration: 250ms;
-}
-
-#search-btn:hover {
-    background-color: #888;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
-
 #bing {
-    color: darkblue;
+    color:#00008b;
 }
 
 #ecosia {
-    color: darkolivegreen;
+    color:#556b2f;
 }
 
 #fb {
-    color: darkslateblue;
+    color:#483d8b;
 }
 
 #google {
-    color: #6666ff;
+    color:#66f;
 }
 
 #qwant {
-    color: darkorchid;
+    color:#9932cc;
+}
+
+#search-btn {
+    background-color:#333;
+    border-radius:10px;
+    color:#f1f1f1;
+    margin:10px 0;
+    transition-duration:250ms;
+}
+
+#search-btn:hover {
+    background-color:#888;
+    border-radius:5px;
+    color:#fff;
+    cursor:pointer;
+}
+
+* {
+    box-sizing:border-box;
+    text-decoration:none;
+    font-family:sans-serif;
+    margin:0;
+    padding:0;
+}
+
+.searchbar {
+    background:#f1f1f1;
+    height:270px;
+    width:520px;
+    padding:40px 80px;
+    border-radius:10px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.searchbar h1,.searchbar p {
+    text-align:center;
+}
+
+.searchbar input,.searchbar select {
+    font-size:15px;
+    color:#333;
+    border:none;
+    width:100%;
+    outline:none;
+    background:none;
+    padding:0 5px;
+    height:40px;
+}
+
+.searchbar option {
+    background-color:#f1f1f1;
+}
+
+.searchbar p {
+    margin-bottom:30px;
+}
+
+body {
+    min-height:100vh;
+    background-image:linear-gradient(120deg,#3498db,#8e44ad);
 }
