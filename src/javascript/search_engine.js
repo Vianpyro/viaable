@@ -20,7 +20,7 @@ switch (document.cookie) {
     case "sengine=Qwant":
         document.getElementById("qwant").selected = "selected";
         break;
-    case "sengine=Qwant":
+    case "sengine=Youtube":
         document.getElementById("yt").selected = "selected";
         break;
     default:
@@ -68,3 +68,5 @@ function detect_sengine() {
     document.cookie = `sengine=${selected_sengine};` + `expires=${get_expiration_date()}`;
     console.log(`sengine=${selected_sengine};` + `expires=${get_expiration_date()}`)
 }
+
+detect_sengine();
