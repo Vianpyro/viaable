@@ -20,6 +20,9 @@ switch (document.cookie) {
     case "sengine=Qwant":
         document.getElementById("qwant").selected = "selected";
         break;
+    case "sengine=Qwant":
+        document.getElementById("yt").selected = "selected";
+        break;
     default:
         document.getElementById("google").selected = "selected";
 }
@@ -55,6 +58,9 @@ function detect_sengine() {
             break;
         case "Qwant": 
             document.getElementById("SENGINE").action = "https://www.qwant.com/";
+            break;
+        case "Youtube":
+            document.getElementById("SENGINE").action = "https://www.youtube.com/results";
             break;
         default:
             document.getElementById("SENGINE").action = "https://www.google.com/search";
