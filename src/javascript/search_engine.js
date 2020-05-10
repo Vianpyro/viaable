@@ -1,43 +1,65 @@
-switch (document.cookie) {
-    case "sengine=Bing":
-        document.getElementById("bing").selected = "selected";
-        break;
-    case "sengine=DuckDuckGo":
-        document.getElementById("ddgo").selected = "selected";
-        break;
-    case "sengine=Ecosia":
-        document.getElementById("ecosia").selected = "selected";
-        break;
-    case "sengine=Facebook":
-        document.getElementById("fb").selected = "selected";
-        break;
-    case "sengine=GitHub":
-        document.getElementById("gh").selected = "selected";
-        break;
-    case "sengine=Google":
-        document.getElementById("google").selected = "selected";
-        break;
-    case "sengine=Qwant":
-        document.getElementById("qwant").selected = "selected";
-        break;
-    case "sengine=Youtube":
-        document.getElementById("yt").selected = "selected";
-        break;
-    default:
-        document.getElementById("google").selected = "selected";
+console.log("Search engine script works!")
+
+function saveCookies() {
+    myCookie["_uLastSearchEngine"] = sengine.options[sengine.selectedIndex].text;
+    document.cookie = "";
+    var expiresAttrib = new Date().setFullYear(new Date().getFullYear() + 1).toString();
+    var cookieString = "";
+    for (var key in myCookie) {
+        cookieString = key + "=" + myCookie[key] + ";" + expiresAttrib + ";";
+        document.cookie = cookieString;
+    }
 }
 
-function get_expiration_date() {
-    var date = new Date();
-    var year = date.getFullYear() + 1;
-    return new Date(year, date.getMonth(), date.getDate());
+function loadCookies() {
+    myCookie = {};
+    var key_value = document.cookie.split(";");
+    for (var id in key_value) {
+        var cookie = key_value[id].split("=");
+        myCookie[cookie[0].trim()] = cookie[1];
+    }
+
+    // Get the last used search engine
+    select_last_search_engine(myCookie["_uLastSearchEngine"]);
 }
 
-function detect_sengine() {
+function select_last_search_engine(lastSearchEngine) {
+    switch (lastSearchEngine) {
+        case "Bing":
+            document.getElementById("bing").selected = "selected";
+            break;
+        case "DuckDuckGo":
+            document.getElementById("ddgo").selected = "selected";
+            break;
+        case "Ecosia":
+            document.getElementById("ecosia").selected = "selected";
+            break;
+        case "Facebook":
+            document.getElementById("fb").selected = "selected";
+            break;
+        case "GitHub":
+            document.getElementById("gh").selected = "selected";
+            break;
+        case "Google":
+            document.getElementById("google").selected = "selected";
+            break;
+        case "Qwant":
+            document.getElementById("qwant").selected = "selected";
+            break;
+        case "Youtube":
+            document.getElementById("yt").selected = "selected";
+            break;
+        default:
+            document.getElementById("google").selected = "selected";
+            break;
+    }
+    set_sengine_link();
+}
+
+function set_sengine_link() {
     var sengine = document.getElementById("sengine"); // getting the selected web search engine
-    var selected_sengine = sengine.options[sengine.selectedIndex].text;
 
-    switch(selected_sengine) {
+    switch (sengine.options[sengine.selectedIndex].text) {
         case "Bing":
             document.getElementById("SENGINE").action = "https://www.bing.com/search";
             break;
@@ -65,8 +87,7 @@ function detect_sengine() {
         default:
             document.getElementById("SENGINE").action = "https://www.google.com/search";
     }
-    document.cookie = `sengine=${selected_sengine};` + `expires=${get_expiration_date()}`;
-    console.log(`sengine=${selected_sengine};` + `expires=${get_expiration_date()}`)
+    saveCookies();
 }
 
-detect_sengine();
+loadCookies();
