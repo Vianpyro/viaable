@@ -1,3 +1,5 @@
+console.log("Cookies " + get_expiration_date())
+
 switch (document.cookie) {
     case "sengine=Bing":
         document.getElementById("bing").selected = "selected";
@@ -30,7 +32,7 @@ switch (document.cookie) {
 function get_expiration_date() {
     var date = new Date();
     var year = date.getFullYear() + 1;
-    return new Date(year, date.getMonth(), date.getDate());
+    return "expires=" + new Date(year, date.getMonth(), 28) + ";";
 }
 
 function set_sengine_link() {
@@ -65,8 +67,7 @@ function set_sengine_link() {
         default:
             document.getElementById("SENGINE").action = "https://www.google.com/search";
     }
-    document.cookie = `sengine=${selected_sengine};` + `expires=${get_expiration_date()}`;
-    console.log(`sengine=${selected_sengine};` + `expires=${get_expiration_date()}`)
+    document.cookie = `sengine=${selected_sengine};` + get_expiration_date();
 }
 
 set_sengine_link();

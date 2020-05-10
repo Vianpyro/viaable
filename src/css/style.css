@@ -126,7 +126,16 @@
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    margin: 20px 3px 0;
+    margin: 3px;
+    transition-duration: 250ms;
+}
+
+.shortcut:hover {
+    border-radius: 15%;
+}
+
+.shortcuts center {
+    margin-top: 20px;
 }
 
 body {
