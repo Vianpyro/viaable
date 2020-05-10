@@ -4,37 +4,30 @@
 
 #amazon-shortcut {
     background-image: url(../img/amazon-logo.png);
-    background-size: var(--shortcut-bg-size);
 }
 
 #facebook-shortcut {
     background-image: url(../img/facebook-logo.png);
-    background-size: var(--shortcut-bg-size);
 }
 
 #netflix-shortcut {
     background-image: url(../img/netflix-logo.png);
-    background-size: var(--shortcut-bg-size);
 }
 
 #reddit-shortcut {
     background-image: url(../img/reddit-logo.png);
-    background-size: var(--shortcut-bg-size);
 }
 
 #twitch-shortcut {
     background-image: url(../img/twitch-logo.png);
-    background-size: var(--shortcut-bg-size);
 }
 
 #wikipedia-shortcut {
     background-image: url(../img/wikipedia-logo.png);
-    background-size: var(--shortcut-bg-size);
 }
 
 #youtube-shortcut {
     background-image: url(../img/youtube-logo.png);
-    background-size: var(--shortcut-bg-size);
 }
 
 #bing {
@@ -82,6 +75,11 @@
     font-family:sans-serif;
     margin:0;
     padding:0;
+}
+
+.shortcut {
+    background-size: var(--shortcut-bg-size) var(--shortcut-bg-size);
+    color: #000;
 }
 
 .searchbar {
