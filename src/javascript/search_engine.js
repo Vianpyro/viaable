@@ -29,17 +29,8 @@ switch (document.cookie) {
         document.getElementById("google").selected = "selected";
 }
 
-function get_expiration_date() {
-    var date = new Date();
-    var year = date.getFullYear() + 1;
-    return "expires=" + new Date(year, date.getMonth(), 28) + ";";
-}
-
 function set_sengine_link() {
-    var sengine = document.getElementById("sengine"); // getting the selected web search engine
-    var selected_sengine = sengine.options[sengine.selectedIndex].text;
-
-    switch (selected_sengine) {
+    switch (detect_search_engine()) {
         case "Bing":
             document.getElementById("SENGINE").action = "https://www.bing.com/search";
             break;
@@ -67,7 +58,14 @@ function set_sengine_link() {
         default:
             document.getElementById("SENGINE").action = "https://www.google.com/search";
     }
-    document.cookie = `sengine=${selected_sengine};` + get_expiration_date();
+    // document.cookie = `sengine=${selected_sengine};` + get_expiration_date();
+}
+
+function detect_search_engine() {
+    var sengine = document.getElementById("sengine"); // getting the selected web search engine
+    var selected_sengine = sengine.options[sengine.selectedIndex].text;
+    console.log(selected_sengine)
+    return selected_sengine
 }
 
 set_sengine_link();
