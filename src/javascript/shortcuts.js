@@ -14,7 +14,7 @@ function load_shortcuts() {
     for (var element in website) {
         websiteName = get_short_name(website[element]);
         document.getElementById("generated").innerHTML += `<figure><a class="single-shortcut" href="https://www.${website[element]}">
-            <img src="src/img/${websiteName}-logo.png" onerror="this.src='src/img/void.png'">
+            <img src="src/img/${website[element].substr(0, website[element].indexOf('.'))}-logo.png" onerror="this.src='src/img/void.png'">
             <br/><figcaption">${websiteName}</figcaption></a></figure>`
     }
 }
