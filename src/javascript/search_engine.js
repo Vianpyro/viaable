@@ -58,7 +58,7 @@ function set_sengine_link() {
         default:
             document.getElementById("SENGINE").action = "https://www.google.com/search";
     }
-    // document.cookie = `sengine=${selected_sengine};` + get_expiration_date();
+    document.cookie = `sengine=${selected_sengine};` + get_expiration_date();
 }
 
 function detect_search_engine() {
