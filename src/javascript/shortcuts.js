@@ -5,12 +5,6 @@ function add_shortcut() {
         document.getElementById("generated").innerHTML += `<figure><a class="single-shortcut" href="https://www.${url}">
             <img src="https://www.${url}/favicon.ico" onerror="this.src='src/img/void.png'">
             <br/><figcaption">${websiteName}</figcaption></a></figure>`
-        
-            // `<a href="https://www.${url}/" class="single-shortcut" style="background-image: url('https://www.${url}/favicon.ico');">${url.substring(0, 2).toUpperCase()}</a>`
-
-        // < figure > <a id="get${element.name}Stats" onclick="loadChampData('${element.name}');">
-        //     <img class="champ-img" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${element.name}_0.jpg">
-        //         <figcaption id="champ${element.name}Name"></figcaption></a></figure>
     }
 }
 
