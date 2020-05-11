@@ -1,58 +1,9 @@
-:root {
-    --shortcut-bg-size: 40px;
-}
-
-#amazon-shortcut {
-    background-image: url(../img/amazon-logo.png);
-}
-
-#facebook-shortcut {
-    background-image: url(../img/facebook-logo.png);
-}
-
-#netflix-shortcut {
-    background-image: url(../img/netflix-logo.png);
-}
-
-#reddit-shortcut {
-    background-image: url(../img/reddit-logo.png);
-}
-
-#twitch-shortcut {
-    background-image: url(../img/twitch-logo.png);
-}
-
-#wikipedia-shortcut {
-    background-image: url(../img/wikipedia-logo.png);
-}
-
-#youtube-shortcut {
-    background-image: url(../img/youtube-logo.png);
-}
-
-#bing {
-    color:#00008b;
-}
-
-#ecosia {
-    color:#556b2f;
-}
-
-#fb {
-    color:#483d8b;
-}
-
-#google {
-    color:#66f;
-}
-
-#qwant {
-    color:#9932cc;
-}
-
-#yt {
-    color: #dc143c;
-}
+#bing {color:#00008b;}
+#ecosia {color:#556b2f;}
+#fb {color:#483d8b;}
+#google {color:#66f;}
+#qwant {color:#9932cc;}
+#yt {color: #dc143c;}
 
 #search-btn {
     background-color:#333;
@@ -75,11 +26,6 @@
     font-family:sans-serif;
     margin:0;
     padding:0;
-}
-
-.shortcut {
-    background-size: var(--shortcut-bg-size) var(--shortcut-bg-size);
-    color: #000;
 }
 
 .searchbar {
@@ -115,25 +61,6 @@
 
 .searchbar p {
     margin-bottom:30px;
-}
-
-.shortcut {
-    height: var(--shortcut-bg-size);
-    width: var(--shortcut-bg-size);
-    line-height: var(--shortcut-bg-size);
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 3px;
-    transition-duration: 250ms;
-}
-
-.shortcut:hover {
-    border-radius: 15%;
-}
-
-.shortcuts center {
-    margin-top: 20px;
 }
 
 body {

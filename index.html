@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/shortcuts.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,21 +25,12 @@
             </select>
             <input type="submit" value="Search" id="search-btn">
         </form>
-        <div class="shortcuts">
-            <center>
-                <a href="https://www.amazon.com/" class="shortcut" id="amazon-shortcut"></a>
-                <a href="https://www.facebook.com/" class="shortcut" id="facebook-shortcut"></a>
-                <a href="https://www.netflix.com/" class="shortcut" id="netflix-shortcut"></a>
-                <a href="https://www.reddit.com/" class="shortcut" id="reddit-shortcut"></a>
-                <a href="https://www.twitch.tv/" class="shortcut" id="twitch-shortcut"></a>
-                <a href="https://www.wikipedia.org/" class="shortcut" id="wikipedia-shortcut"></a>
-                <a href="https://www.youtube.com/" class="shortcut" id="youtube-shortcut"></a>
-                <div id="custom-shortcuts"></div>
-                <a href="#" class="shortcut" onclick="add_shortcut()">+</a>
-            </center>
-        </div>
     </div>
 
+    <div class="shortcuts">
+        <div id="generated"></div>
+        <p class="single-shortcut" onclick="add_shortcut()"><img src="src/img/plus-img.png"></p>
+    </div>
     
     <div class="script">
         <script src="src/javascript/search_engine.js"></script>

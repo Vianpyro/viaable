@@ -1,0 +1,44 @@
+:root {--shortcut-bg-size: 40px;}
+
+.shortcuts {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    right: 20%;
+    top: 70%;
+    transform: translate(-50%, 0);
+}
+
+.shortcuts figure {
+    margin: 5px;
+    display: inline-block;
+    justify-content: space-between;
+    font-size: 9px;
+}
+
+.shortcuts a {
+    color: transparent;
+}
+
+.shortcuts a:hover {
+    color: #000;
+}
+
+.shortcuts figure:hover,
+.single-shortcut img:hover {
+    border-radius: 15%;
+    color: #ccc;
+    transition-duration: 250ms;
+    transform: scale(1.05);
+}
+
+.single-shortcut img {
+    border-radius: 50%;
+    background-color: #ccc;
+    height: var(--shortcut-bg-size);
+    width: var(--shortcut-bg-size);
+}
+
+.shortcuts p:hover {
+    cursor: pointer;
+}
