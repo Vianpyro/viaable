@@ -1,32 +1,8 @@
 console.log("Cookies " + get_expiration_date())
 
-switch (document.cookie) {
-    case "sengine=Bing":
-        document.getElementById("bing").selected = "selected";
-        break;
-    case "sengine=DuckDuckGo":
-        document.getElementById("ddgo").selected = "selected";
-        break;
-    case "sengine=Ecosia":
-        document.getElementById("ecosia").selected = "selected";
-        break;
-    case "sengine=Facebook":
-        document.getElementById("fb").selected = "selected";
-        break;
-    case "sengine=GitHub":
-        document.getElementById("gh").selected = "selected";
-        break;
-    case "sengine=Google":
-        document.getElementById("google").selected = "selected";
-        break;
-    case "sengine=Qwant":
-        document.getElementById("qwant").selected = "selected";
-        break;
-    case "sengine=Youtube":
-        document.getElementById("yt").selected = "selected";
-        break;
-    default:
-        document.getElementById("google").selected = "selected";
+function select_last_search_engine(string) {
+    document.getElementById(string).selected = "selected";
+    console.log(string + " was the last search engine")
 }
 
 function set_sengine_link() {
@@ -58,14 +34,13 @@ function set_sengine_link() {
         default:
             document.getElementById("SENGINE").action = "https://www.google.com/search";
     }
-    document.cookie = `sengine=${selected_sengine};` + get_expiration_date();
+    save_cookies();
 }
 
 function detect_search_engine() {
     var sengine = document.getElementById("sengine"); // getting the selected web search engine
     var selected_sengine = sengine.options[sengine.selectedIndex].text;
-    console.log(selected_sengine)
     return selected_sengine
 }
 
-set_sengine_link();
+    load_cookies();
