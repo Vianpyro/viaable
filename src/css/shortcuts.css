@@ -34,7 +34,7 @@
 
 .single-shortcut img {
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #f1f1f1;
     height: var(--shortcut-bg-size);
     width: var(--shortcut-bg-size);
 }
