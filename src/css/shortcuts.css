@@ -4,7 +4,7 @@
     text-align: center;
     position: absolute;
     left: 50%;
-    right: 20%;
+    right: 10%;
     top: 70%;
     transform: translate(-50%, 0);
 }
@@ -49,4 +49,10 @@
         right: 5%;
         top: 80%;
     }
+}
+
+@media only screen and (max-height: 700px) {
+    .shortcuts {
+    transform: translate(-50%, 50%);
+}
 }
